@@ -60,7 +60,7 @@ The environment described above was solved using an actor-critic algorithm, spec
 
 #### Training the Agents
 
-- `ddpg_multiple_agents_training.ipynb` is used to train the multi-agent DDPG model
+- `ddpg_multiple_agents_training.ipynb` is a Jupyter notebook that can be used to train the multi-agent DDPG model
 
 #### The Trained Actor and Critic Networks
 
