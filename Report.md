@@ -49,7 +49,7 @@ The critic network takes the state and action vectors as input, and returns a sc
 
 The 20 agents were trained for 500 episodes. After the first 100 episodes, the average score was 30.91 and the environment was therefore solved in the least amount of time (episodes 1 to 100). The best average score of 37.11 was obtained after 160 episodes (averaged over episodes 61 to 160). The actor and critic weights corresponding to these agents is stored in the code folder. Based on the plot below, it does not appear that training the agents for any longer would improve their performance further. The dashed vertical line indicates the point at which the enviroment was considered solved.
 
-![scores.png](scores.png)
+![results.png](results.png)
 
 Here are the trained agents in action:
 
@@ -58,14 +58,13 @@ Here are the trained agents in action:
 
 ### Future Plans for Improvement
 
-The performance of the agent might be improved by considering the following:
+The performance of the agents might be improved by considering the following:
 
 - Hyperparameter optimisation 
 
-  Many of the hyperparameters listed above were treated as fixed. These could be tuned to improve performance.
+  Many of the hyperparameters, such as the network architectures (number of layers and neurons), learning rates, batch and buffer sizes, and the level of noise, could be further tuned to improve performance.
 
-- Duelling DQN or other learning algorithms
+- Alternative learning algorithms
 
-  One could consider using a duelling DQN that predicts the state-value function *V(s)* and advantages *A(s,a)* of taking each action within a given state. One could also consider algorithms other than DQNs. 
+  Alternative methods include PPO, A2C, A3C and the recent D4PG algorithm. One could also consider using more stable algorithms such as trust region policy optimisation (TRPO) and truncated natural policy gradient (TNPG). 
 
-Further work is also required to optimise the code for training. In particular, the current implementation of prioritised replay is very slow and additional work is required to make this more computationally efficient.
